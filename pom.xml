@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kasun.bigqueue.testing</groupId>
+    <artifactId>bigqueue-testing</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wso2.orbit.com.leansoft</groupId>
+            <artifactId>bigqueue</artifactId>
+            <version>0.7.0.wso2v1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.leansoft</groupId>
+            <artifactId>bigqueue</artifactId>
+            <version>${bigqueue.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.esotericsoftware.kryo</groupId>
+            <artifactId>kryo</artifactId>
+            <version>2.21</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>wso2-nexus</id>
+            <name>WSO2 internal Repository</name>
+            <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>github.release.repo</id>
+            <url>https://raw.github.com/bulldog2011/bulldog-repo/master/repo/releases/</url>
+        </repository>
+    </repositories>
+    <properties>
+        <bigqueue.version>0.7.0</bigqueue.version>
+        <log4j.version>1.2.16</log4j.version>
+        <log4j.import.pkg.version>[1.2.0, 2.0.0)</log4j.import.pkg.version>
+    </properties>
+</project>
